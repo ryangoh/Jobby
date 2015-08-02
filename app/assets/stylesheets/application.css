@@ -14,5 +14,5 @@
  *= require_self
  */
 
-body { padding-top: 100px; }
-footer { margin-top: 100px; }
+
+.navbar-brand { padding-bottom: 10px;}
