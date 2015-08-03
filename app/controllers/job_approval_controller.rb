@@ -1,0 +1,2 @@
+class JobApprovalController < ApplicationController
+end
