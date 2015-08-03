@@ -7,7 +7,7 @@ bindFacebookEvents = ->
     .on('page:fetch', saveFacebookRoot)
     .on('page:change', restoreFacebookRoot)
     .on('page:load', ->
-      FB?.XFBML.parse()
+      FB.XFBML.parse()
     )
   @fbEventsBound = true
 
