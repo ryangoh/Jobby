@@ -9,7 +9,7 @@
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 
   <meta charset="utf-8">
@@ -37,7 +37,7 @@
 </head>
 <body class="home">
     <div id="fb-root"></div>
-    
+
 
     <%= render 'layouts/menu' %>
 
@@ -48,6 +48,7 @@
 
   <!-- Latest compiled and minified JavaScript -->
   <!-- // <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <script src="assets/headroom.min.js"></script>
