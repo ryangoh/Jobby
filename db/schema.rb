@@ -11,11 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150728122551) do
 
+
+
+ActiveRecord::Schema.define(version: 20150802094419) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "job_approvals", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "job_id"
+    t.string   "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+>>>>>>> master
   create_table "jobs", force: :cascade do |t|
     t.string   "title"
     t.string   "duration"
@@ -44,6 +55,10 @@ ActiveRecord::Schema.define(version: 20150728122551) do
     t.string   "name"
     t.text     "job_requested"
     t.text     "job_posted"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

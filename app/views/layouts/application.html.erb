@@ -1,34 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Jobby | One Stop Freelance Job</title>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
 
   <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-.
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
+
+  <meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The best place to look for the job you are passionate about">
+	<meta name="author"      content="Codingshop House">
+
+	<link rel="shortcut icon" href=<%= asset_path('gt_favicon.png')%>>
+
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="assets/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/font-awesome.min.css"> -->
+
+
+	<!-- Custom styles for our template -->
+	<!-- <link rel="stylesheet" href="assets/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/main.css"> -->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
 </head>
-<body>
+<body class="home">
+    <div id="fb-root"></div>
 
-  <%= render 'layouts/menu' %>
-  
-  <div class="container">
-    <%= render 'layouts/flash_messages' %>
 
+    <%= render 'layouts/menu' %>
+
+    <%# render 'layouts/flash_messages' %>
     <%= yield %>
-  </div>
 
-  <footer>
-    <div class="container">
-      @ Jobby | CodingShopHouse
-    </div>
-  </footer>
+    <%= render 'layouts/footer' %>
+
   <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+  <!-- // <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <!-- // <script src="assets/headroom.min.js"></script>
+  // <script src="assets/jQuery.headroom.min.js"></script>
+  // <script src="assets/template.js"></script> -->
 </body>
 </html>

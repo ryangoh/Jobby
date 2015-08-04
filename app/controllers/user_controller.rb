@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-  
+
 
   def index
     @users = User.all
@@ -11,4 +11,6 @@ class UserController < ApplicationController
       redirect_to :back, :alert => "Access denied."
     end
   end
+
+
 end

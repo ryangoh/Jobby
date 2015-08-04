@@ -1,0 +1,82 @@
+<footer id="footer" class="top-space">
+
+  <div class="footer1">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 widget">
+          <h3 class="widget-title">Contact</h3>
+          <div class="widget-body">
+            <p>+04 1234567<br>
+              <a href="mailto:#">jobby.freelance@gmail.com</a><br>
+              <br>
+              The Coding Shop House<br>84, Lebuh Melayu, 10100 Georgetown, Penang.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 widget">
+          <h3 class="widget-title">Follow Us</h3>
+          <div class="widget-body">
+              <div class="fb-page" data-href="https://www.facebook.com/thecodingshophouse" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
+                <div class="fb-xfbml-parse-ignore">
+                  <blockquote cite="https://www.facebook.com/thecodingshophouse">
+                    <a href="https://www.facebook.com/thecodingshophouse">The Coding Shophouse</a>
+                  </blockquote>
+                </div>
+              </div>
+            <!-- <p class="follow-me-icons">
+              <!-- <a href="https://www.facebook.com/thecodingshophouse"><i class="fa fa-facebook fa-2"></i></a> -->
+              <!-- <a href=""><i class="fa fa-twitter fa-2"></i></a>
+              <a href=""><i class="fa fa-linkedin fa-2"></i></a>
+              <a href=""><i class="fa fa-github fa-2"></i></a> -->
+            <!-- </p> -->
+          </div>
+        </div>
+
+        <div class="col-md-6 widget">
+          <!-- <h3 class="widget-title">Text widget</h3> -->
+          <div class="widget-body">
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
+            <p>Eius consequatur nihil quibusdam! Laborum, rerum, quis, inventore ipsa autem repellat provident assumenda labore soluta minima alias temporibus facere distinctio quas adipisci nam sunt explicabo officia tenetur at ea quos doloribus dolorum voluptate reprehenderit architecto sint libero illo et hic.</p> -->
+          </div>
+        </div>
+
+      </div> <!-- /row of widgets -->
+    </div>
+  </div>
+
+  <div class="footer2">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 widget">
+          <div class="widget-body">
+            <p class="simplenav">
+              <a href="/">Home</a> |
+              <a href="#">About</a> |
+              <a href="#">Contact Us</a> |
+
+              <% if user_signed_in? %>
+                <b><%= link_to "Logout", destroy_user_session_path, method: :delete  %></b>
+              <% else %>
+                <b><%= link_to "Sign Up", new_user_registration_path %></b>
+                <b><%= link_to "Log In", new_user_session_path  %></b>
+              <% end %>
+
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 widget">
+          <div class="widget-body">
+            <p class="text-right">
+              Copyright &copy; 2015, CodingshopHouse.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>
