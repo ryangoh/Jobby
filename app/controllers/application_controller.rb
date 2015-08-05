@@ -15,5 +15,8 @@ class ApplicationController < ActionController::Base
 
   end
 
+  def after_sign_in_path_for(resource)
+    jobs_path#set path to go after sign in
+  end
 
 end
