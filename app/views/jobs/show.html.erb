@@ -1,39 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div class='container'>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @job.title %>
-</p>
+  <p>
+    <strong>Title</strong>
+    <br/>
+    <%= @job.title %>
+  </p>
 
-<p>
-  <strong>Duration:</strong>
-  <%= @job.duration %>
-</p>
+  <p>
+    <strong>Duration</strong>
+    <br/>
+    <%= @job.duration %>
+  </p>
 
-<p>
-  <strong>Budget:</strong>
-  <%= @job.budget %>
-</p>
+  <p>
+    <strong>Budget</strong>
+    <br/>
+    <%= number_to_currency(@job.budget, :unit => "€") %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @job.description %>
-</p>
+  <p>
+    <strong>Description</strong>
+    <br/>
+    <%= @job.description %>
+  </p>
 
-<p>
-  <strong>Skill:</strong>
-  <%= @job.skill %>
-</p>
+  <p>
+    <strong>Skill</strong>
+    <br/>
+    <%= @job.skill %>
+  </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @job.status %>
-</p>
+  <p>
+    <strong>Status</strong>
+    <br/>
+    <%= @job.status %>
+  </p>
 
-<p>
-  <strong>Create by:</strong>
-  <%= @job.create_by %>
-</p>
+  <p>
+    <strong>Create by</strong>
+    <br/>
+    <%  creator = User.all.find_by(:id =>@job.create_by) %>
+    <%= creator.name %>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+  </p>
+
+  <%= link_to 'Edit', edit_job_path(@job), :class => "btn btn-default" %>
+  <%= link_to 'Back', jobs_path, :class => "btn btn-default" %>
+</div>
