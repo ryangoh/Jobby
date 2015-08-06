@@ -1,49 +1,53 @@
-<p id="notice"><%= notice %></p>
+<div class="container" style="padding-top:50px;padding-bottom:50px;">
+  <div class="col-md-8 col-md-offset-2">
+      <div class="row">
+        <p>
+          <div class="col-md-2"><strong>Title</strong></div>
+          <div class="col-md-8"><%= @job.title %></div>
+        </p>
+      </div>
 
-<p>
-  <strong>Title</strong>
-  <br/>
-  <%= @job.title %>
-</p>
+      <div class="row">
+        <p>
+          <div class="col-md-2"><strong>Duration</strong></div>
+          <div class="col-md-8"><%= @job.duration %></div>
+        </p>
+      </div>
 
-<p>
-  <strong>Duration</strong>
-  <br/>
-  <%= @job.duration %>
-</p>
+      <div class="row">
+        <p>
+          <div class="col-md-2"><strong>Budget</strong></div>
+          <div class="col-md-8"><%= number_to_currency(@job.budget, :unit => "€") %></div>
+        </p>
+      </div>
 
-<p>
-  <strong>Budget</strong>
-  <br/>
-  <%= number_to_currency(@job.budget, :unit => "€") %>
-</p>
+      <div class="row">
+        <p>
+          <div class="col-md-2"><strong>Description</strong></div>
+          <div class="col-md-8"><%= @job.description %></div>
+        </p>
+      </div>
+        <!-- <p>
+          <div class="col-md-2"><strong>Skill</strong></div>
+            <%#= @job.skill %>
+        </p>
 
-<p>
-  <strong>Description</strong>
-  <br/>
-  <%= @job.description %>
-</p>
+        <p>
+          <div class="col-md-2"><strong>Status</strong></div>
+            <%#= @job.status %>
+        </p>
 
-<p>
-  <strong>Skill</strong>
-  <br/>
-  <%= @job.skill %>
-</p>
-
-<p>
-  <strong>Status</strong>
-  <br/>
-  <%= @job.status %>
-</p>
-
-<p>
-  <strong>Create by</strong>
-  <br/>
-  <%= @job.create_by %>
-  <%# creator = User.all.find_by(:id =>@job.create_by) %>
-  <%#= creator.name %>
-
-</p>
-
-<%= link_to 'Edit', edit_job_path(@job), :class => "btn btn-default" %>
-<%= link_to 'Back', jobs_path, :class => "btn btn-default" %>
+        <p>
+          <div class="col-md-2"><strong>Create by</strong></div>
+            <%#= @job.create_by %> -->
+          <%# creator = User.all.find_by(:id =>@job.create_by) %>
+          <%#= creator.name %>
+  <!--
+        </p> -->
+        <br>
+      <div class="row">
+        <%= link_to 'Edit', edit_job_path(@job), :class => "btn btn-action" %>
+        <%= link_to 'Back', jobs_path, :class => "btn btn-action" %>
+      </div>
+  </div>
+</div>
