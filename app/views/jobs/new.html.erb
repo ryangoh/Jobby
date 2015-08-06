@@ -1,6 +1,12 @@
-<h1>New Job</h1>
-<b> Please fill in job details in the form below. </b>
-<%= render 'form' %>
 
-<%= link_to 'Back', jobs_path %> |
-<%= link_to 'Home', root_url %>
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-3">
+    <h1>New Job</h1>
+    <b> Please fill in job details in the form below. </b>
+    <%= render 'form' %>
+
+    <%= link_to 'Back', jobs_path, :class=>"btn btn-xs btn-success" %>
+    <%= link_to 'Home', root_url, :class=>"btn btn-xs btn-success"%>
+  </div>
+</div>
