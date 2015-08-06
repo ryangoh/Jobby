@@ -53,14 +53,14 @@
         <div class="col-md-6 widget">
           <div class="widget-body">
             <p class="simplenav">
-              <a href="/">Home</a> |
+              <b><a href="/">Home</a></b> |
               <!-- <a href="#">About</a> | -->
               <!-- <a href="#">Contact Us</a> | -->
 
               <% if user_signed_in? %>
                 <b><%= link_to "Logout", destroy_user_session_path, method: :delete  %></b>
               <% else %>
-                <b><%= link_to "Sign Up", new_user_registration_path %></b>
+                <b><%= link_to "Sign Up", new_user_registration_path %></b> |
                 <b><%= link_to "Log In", new_user_session_path  %></b>
               <% end %>
 
@@ -71,7 +71,7 @@
         <div class="col-md-6 widget">
           <div class="widget-body">
             <p class="text-right">
-              Copyright &copy; 2015, CodingshopHouse.
+              <b>Copyright &copy; 2015, CodingshopHouse</b>
             </p>
           </div>
         </div>
