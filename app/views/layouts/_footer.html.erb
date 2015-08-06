@@ -5,7 +5,7 @@
       <div class="row">
 
         <div class="col-md-6 widget">
-          <h3 class="widget-title">Contact</h3>
+          <h3 class="widget-title" id="contact">Contact</h3>
           <div class="widget-body">
             <p>+04 1234567<br>
               <a href="mailto:#">jobby.freelance@gmail.com</a><br>
@@ -54,8 +54,8 @@
           <div class="widget-body">
             <p class="simplenav">
               <a href="/">Home</a> |
-              <a href="#">About</a> |
-              <a href="#">Contact Us</a> |
+              <!-- <a href="#">About</a> | -->
+              <!-- <a href="#">Contact Us</a> | -->
 
               <% if user_signed_in? %>
                 <b><%= link_to "Logout", destroy_user_session_path, method: :delete  %></b>
