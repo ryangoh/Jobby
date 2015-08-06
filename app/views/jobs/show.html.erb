@@ -1,39 +1,49 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Title</strong>
+  <br/>
   <%= @job.title %>
 </p>
 
 <p>
-  <strong>Duration:</strong>
+  <strong>Duration</strong>
+  <br/>
   <%= @job.duration %>
 </p>
 
 <p>
-  <strong>Budget:</strong>
-  <%= @job.budget %>
+  <strong>Budget</strong>
+  <br/>
+  <%= number_to_currency(@job.budget, :unit => "€") %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Description</strong>
+  <br/>
   <%= @job.description %>
 </p>
 
 <p>
-  <strong>Skill:</strong>
+  <strong>Skill</strong>
+  <br/>
   <%= @job.skill %>
 </p>
 
 <p>
-  <strong>Status:</strong>
+  <strong>Status</strong>
+  <br/>
   <%= @job.status %>
 </p>
 
 <p>
-  <strong>Create by:</strong>
+  <strong>Create by</strong>
+  <br/>
   <%= @job.create_by %>
+  <%# creator = User.all.find_by(:id =>@job.create_by) %>
+  <%#= creator.name %>
+
 </p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<%= link_to 'Edit', edit_job_path(@job), :class => "btn btn-default" %>
+<%= link_to 'Back', jobs_path, :class => "btn btn-default" %>
