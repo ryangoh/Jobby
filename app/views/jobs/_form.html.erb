@@ -11,35 +11,40 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+
+  <div class="row">
+    <div class="field">
+      <div class="col-md-2"><%= f.label :title %></div>
+       <%= f.text_field :title %>  <br>
+    </div>
+    <div class="field">
+      <div class="col-md-2"><%= f.label :duration %></div>
+      <%= f.text_field :duration %>
+    </div>
+    <div class="field">
+      <div class="col-md-2">  <%= f.label :budget %> </div>
+      <%= f.text_field :budget %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :duration %><br>
-    <%= f.text_field :duration %>
-  </div>
-  <div class="field">
-    <%= f.label :budget %><br>
-    <%= f.text_field :budget %>
-  </div>
+
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description, cols:"100", rows:"15" %>
   </div>
-  <div class="field">
-    <%= f.label :skill %><br>
+  <!-- <div class="field">
+    <%= f.label :skill %>
     <%= f.text_field :skill %>
   </div>
   <div class="field">
-    <%= f.label :status %><br>
+    <%= f.label :status %>
     <%= f.text_field :status %>
   </div>
   <div class="field">
-    <%= f.label :create_by %><br>
+    <%= f.label :create_by %>
     <%= f.number_field :create_by %>
-  </div>
+  </div> -->
   <div class="actions">
     <%= f.submit :class=>"btn btn-lg btn-info"%>
   </div>
+
 <% end %>
