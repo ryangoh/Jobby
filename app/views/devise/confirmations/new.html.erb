@@ -1,16 +1,44 @@
-<h2>Resend confirmation instructions</h2>
 
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+<div class="row">
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %> 
-  </div>
+  <!-- Article main content -->
+  <article class="col-xs-12 maincontent">
+    <header class="page-header col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      <h1 class="page-title text-center">Resend confirmation instructions</h1>
+    </header>
 
-  <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
-  </div>
-<% end %>
+    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h3 class="thin text-center">Did not received any email? </h3>
+          <p class="text-center text-muted">Please check junk/spam mail as well.</p>
+          <hr>
 
-<%= render "devise/shared/links" %>
+          <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+            <%= devise_error_messages! %>
+            <%= render 'layouts/flash_messages' %>
+
+            <div class="top-margin">
+              <%= f.label :email %><span class="text-danger">*</span><br />
+              <%= f.email_field :email, autofocus: true, :class =>"form-control", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="actions col-md-12 text-right">
+                <%= f.submit "Resend confirmation instructions", :class => "btn btn-action" %>
+              </div>
+            </div>
+
+            <%= render "devise/shared/links" %>
+           </div>
+          <% end %>
+
+
+        </div>
+      </div>
+    </div>
+
+  </article>
+  <!-- /Article -->
+
+</div>
