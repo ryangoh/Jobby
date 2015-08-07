@@ -39,14 +39,16 @@
 
         <p>
           <div class="col-md-2"><strong>Create by</strong></div>
-            <%#= @job.create_by %> -->
+            <%#= @job.create_by %>
           <%# creator = User.all.find_by(:id =>@job.create_by) %>
           <%#= creator.name %>
-  <!--
-        </p> -->
+        </p>
+        -->
         <br>
       <div class="row">
-        <%= link_to 'Edit', edit_job_path(@job), :class => "btn btn-action" %>
+        <% if current_user.id == @job.create_by %>
+          <%= link_to 'Edit', edit_job_path(@job), :class => "btn btn-action" %>
+        <% end %>
         <%= link_to 'Back', jobs_path, :class => "btn btn-action" %>
       </div>
   </div>

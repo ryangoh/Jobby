@@ -1,9 +1,11 @@
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
-    <h1>New Job</h1>
+    <header class="page-header">
+      <h1 class="page-title">New Job</h1>
+    </header>
     <b> Please fill in job details in the form below. </b>
     <%= render 'form' %>
-    
+
     <%= link_to 'Back', jobs_path, :class=>"btn btn-xs btn-action" %>
     <%= link_to 'Home', root_url, :class=>"btn btn-xs btn-action"%>
   </div>
