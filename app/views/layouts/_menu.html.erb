@@ -8,18 +8,24 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a href="/">Home</a></li>
-					<li><%= link_to 'Job Listing', jobs_path %></li>
-					<li><a href="#contact">Contact Us</a></li>
+					<li class="active">
+						<%= link_to 'Home', '/'%>
+						<!-- <a href="/">Home</a> -->
+					</li>
+					<li><%= link_to 'Job Listing', jobs_path%></li>
+					<li>
+						<%= link_to 'Contact Us', '#contact'%>
+					<!-- <a href="#contact">Contact Us</a> -->
+					</li>
 
           <% if user_signed_in? %>
             <!-- <li>Logged in as <strong><%= current_user.email %></strong></li> -->
-            <li><%= link_to 'Create Job', new_job_path, :class => 'btn' %></li>
-            <li><%= link_to 'Edit Profile', edit_user_registration_path, :class => 'btn' %></li>
-            <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'btn'  %></li>
+            <li><%= link_to 'Create Job', new_job_path%></li>
+            <li><%= link_to 'Edit Profile', edit_user_registration_path%></li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete%></li>
           <% else %>
-            <li><%= link_to "Sign Up", new_user_registration_path, :class => 'btn'  %></li>
-            <li><%= link_to "Log In", new_user_session_path, :class => 'btn'  %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path%></li>
+            <li><%= link_to "Log In", new_user_session_path%></li>
           <% end %>
 
 				</ul>
