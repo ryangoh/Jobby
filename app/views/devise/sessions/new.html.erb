@@ -14,6 +14,9 @@
           <hr>
 
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+            <%= render 'layouts/flash_messages' %>
+
             <div class="top-margin">
               <%= f.label :email %> <span class="text-danger">*</span><br />
               <%= f.email_field :email, autofocus: true , :class =>"form-control" %>
