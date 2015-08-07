@@ -1,8 +1,10 @@
-<header class="page-header">
-  <h1 class="page-title">Editing Job</h1>
-</header>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @job %> |
-<%= link_to 'Back', jobs_path %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <header class="page-header">
+      <h1 class="page-title">Editing Job</h1>
+    </header>
+    <%#= link_to 'Back to job listings', jobs_path, :class=>"btn btn-xs btn-action"  %>
+    <%= link_to 'Back to previous page', @job, :class=>"btn btn-xs btn-action"  %>
+    <%= render 'form' %>
+  </div>
+</div>
