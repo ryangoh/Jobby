@@ -4,14 +4,13 @@
   <!-- Article main content -->
   <article class="col-xs-12 maincontent">
     <header class="page-header col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-      <h1 class="page-title text-center">Resend confirmation instructions</h1>
+      <h1 class="page-title text-center">Resend your instructions</h1>
     </header>
 
     <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
       <div class="panel panel-default">
         <div class="panel-body">
-          <h3 class="thin text-center">Did not received any email? </h3>
-          <p class="text-center text-muted">Please check junk/spam mail as well.</p>
+          <h4 class="thin text-center">If you did not received any email, <br> please check your junk/spam folder. </h4>
           <hr>
 
           <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
@@ -25,7 +24,7 @@
             <hr>
             <div class="row">
               <div class="actions col-md-12 text-right">
-                <%= f.submit "Resend confirmation instructions", :class => "btn btn-action" %>
+                <%= f.submit "Resend your instructions", :class => "btn btn-action" %>
               </div>
             </div>
 
