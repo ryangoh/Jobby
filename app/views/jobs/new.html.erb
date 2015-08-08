@@ -1,12 +1,17 @@
 <div class="row">
-  <div class="col-md-8 col-md-offset-2">
-    <header class="page-header">
-      <h1 class="page-title">New Job</h1>
-    </header>
-    <b> Please fill in job details in the form below. </b>
-    <%= render 'form' %>
-
-    <%= link_to 'Back', jobs_path, :class=>"btn btn-xs btn-action" %>
-    <%= link_to 'Home', root_url, :class=>"btn btn-xs btn-action"%>
+  <div class="col-md-8 col-md-offset-1">
+    <%= link_to '← Back to all Jobs', jobs_path, :class => "btn btn-link" %>
   </div>
+</div>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <header class="page-header">
+        <h1 class="page title">New Job</h1>
+      </header>
+      <b> Please fill in job details in the form below. </b>
+      <%= render 'form' %>
+
+      <!-- <%= link_to 'Back', jobs_path, :class=>"btn btn-xs btn-action" %>
+      <%= link_to 'Home', root_url, :class=>"btn btn-xs btn-action"%> -->
+    </div>
 </div>
