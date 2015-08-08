@@ -7,6 +7,11 @@ Rails.application.routes.draw do
 
   get '/home' => 'landing_page#home'
 
+  # wrapping routes inside the devise scope block, so device recognize
+  devise_scope :user do
+    get '/terms' => 'devise/registrations#terms'
+  end
+
   # You can have the root of your site routed with "root"
   root 'landing_page#home'
 
