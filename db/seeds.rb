@@ -138,5 +138,5 @@ def seed_jobs
   job_seven
 end
 
-seed_users
+#seed_users
 seed_jobs
