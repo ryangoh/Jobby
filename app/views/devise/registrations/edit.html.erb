@@ -8,6 +8,7 @@
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
+
       <%#= render 'layouts/flash_messages' %>
       <div class="container">
         <div class="row">
@@ -84,6 +85,7 @@
         </div>
     </div>
     <% end %>
+
 
     <div class="row" style="padding-top:5px;padding-bottom:5px;">
       <div class="col-md-9 col-md-push-2">
