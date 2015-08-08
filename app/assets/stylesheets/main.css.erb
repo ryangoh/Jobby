@@ -2,14 +2,30 @@
 #head { background:#181015 url(<%= asset_path('studio.jpg')%>) no-repeat; background-size: cover; min-height:520px; text-align: center; padding-top:240px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; }
 #head.secondary { height:100px; min-height: 100px; padding-top:0px; }
 	#head .lead { font-family:"Open sans", Helvetica, Arial; font-size:75px; margin-bottom:6px; color:#ee4000; line-height:1.15em; }
-	#head .tagline { color:#6c7b8b; margin-bottom:25px; font-size: 18px}
-		#head .tagline a { color:#fff; }
+	#head .tagline { color:#800080; margin:0 auto; font-size: 25px ;font-family:"Open sans", Serif, Arial; font-weight:bold; background: rgba(0,0,0,.6); width: 550px; height: 100px; align-items: center; display: flex}
+		#head .tagline a { color:#fff;}
+		#head .taglinebtn {padding-top: 25px}
 	#head .btn { margin-bottom:10px;}
 	#head .btn-default { text-shadow: none; background:transparent; color:rgba(255,255,255,.5); -webkit-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.5); -moz-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.5); box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.5); background: transparent; }
 		#head .btn-default:hover,
 		#head .btn-default:focus { color:rgba(255,255,255,.8); -webkit-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); -moz-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); background: transparent; }
 		#head .btn-default:active,
 		#head .btn-default.active { color:#fff; -webkit-box-shadow:inset 0px 0px 0px 3px #fff; -moz-box-shadow:inset 0px 0px 0px 3px #fff; box-shadow:inset 0px 0px 0px 3px #fff; background: transparent; }
+
+		/*#head .tagline {
+		  display: flex;
+		  align-items: center;
+		  width: 900px;
+		  height: 150px;
+		  background: rgba(0,0,0,.6);
+		  color: #fff;
+		  /*text-align: center;*/
+		  font-weight: normal;
+		  font-size: 3em;
+		  -webkit-backdrop-filter: grayscale(1) contrast(3) blur(1px);
+		  backdrop-filter: grayscale(1) contrast(3) blur(1px);
+		}*/
+
 
 @media (max-width: 767px) {
 	#head { min-height:420px; padding-top:160px; }
