@@ -140,5 +140,3 @@ end
 
 seed_users
 seed_jobs
-
-x
