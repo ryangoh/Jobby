@@ -37,17 +37,17 @@ def seed_users
     :password => 'foozhiyuan',
     :confirmed_at => Time.now,
     :name => 'Zhi Yuan'})
-  User.create({
+  User.new({
     :email => 'ryan@jobby.com',
-    :password => 'gohek',
+    :password => 'gohek123',
     :confirmed_at => Time.now,
     :name => 'Ryan Goh'})
   User.create({
     :email => 'ywwan@jobby.com',
-    :password => 'yinwai',
+    :password => 'yinwai12',
     :confirmed_at => Time.now,
     :name => 'Yin Wai'})
-  me = User.create({
+  User.create({
     :email => 'jylow@jobby.com',
     :password => 'lowjiayou',
     :confirmed_at => Time.now,
