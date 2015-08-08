@@ -14,3 +14,6 @@
 
 # Ignore user upload profile pic
 /public/system/users/avatars/*
+
+# Ignore dropbox setting
+/config/dropbox.yml
