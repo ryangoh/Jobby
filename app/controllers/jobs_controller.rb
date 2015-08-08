@@ -26,7 +26,7 @@ class JobsController < ApplicationController
   # POST /jobs.json
   def create
     @job = Job.new(job_params)
-    @job.create_by = current_user.id # store curr user id 
+    @job.create_by = current_user.id # store curr user id
 
     respond_to do |format|
       if @job.save
