@@ -7,7 +7,10 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, :styles => { :medium => "300x300>", :small => "200x200>", :thumb => "100x100>" },
                              :default_url => "/images/:style/profilepic.png",
                              :storage => :dropbox,
-                             :dropbox_credentials => Rails.root.join("config/dropbox.yml")
+                             :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
+                             :dropbox_options => {
+                               :path => proc { |style| "#{id}/#{avatar.original_filename}" }
+                             }
 
 
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
