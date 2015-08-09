@@ -17,3 +17,6 @@
 
 # Ignore dropbox setting
 /config/dropbox.yml
+
+# Ignore rbenv var setting
+.rbenv-vars
