@@ -63,6 +63,10 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    dotenv (2.0.2)
+    dotenv-rails (2.0.2)
+      dotenv (= 2.0.2)
+      railties (~> 4.0)
     dropbox-sdk (1.6.4)
       json
     erubis (2.7.0)
@@ -178,6 +182,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
+  dotenv-rails
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.3)
