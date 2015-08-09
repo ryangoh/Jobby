@@ -14,7 +14,11 @@
         <div class="row">
           <div class="field">
             <div class="col-md-2"><%= f.label :profile_photo%></div>
-            <div class="col-md-3"><%= image_tag @user.avatar.url(:small) %></div>
+            <div class="col-md-3">
+              <% if @user.avatar %>
+                <%= image_tag @user.avatar.url(:small) %>
+              <% end %>
+            </div>
           </div>
         </div>
 
