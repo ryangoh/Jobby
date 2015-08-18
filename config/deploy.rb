@@ -16,8 +16,8 @@ set :repository, 'https://github.com/ryangoh/Jobby.git'
 set :branch, 'master'
 set :term_mode, nil
 set :rails_env, 'production'
-set :branch, 'master'
-set :db_name, 'Jobby_production2'
+set :branch, 'mina'
+set :db_name, 'Jobby_production3'
 
 # For system-wide RVM install.
 #   set :rvm_path, '/usr/local/rvm/bin/rvm'
@@ -58,9 +58,6 @@ task :setup => :environment do
   queue! %[touch "#{deploy_to}/#{shared_path}/config/database.yml"]
   queue  %[echo "-----> Be sure to edit '#{deploy_to}/#{shared_path}/config/database.yml'."]
 
-  invoke :'setup:db:database_yml'
-  invoke :'create:database'
-
   # queue %[
   #   repo_host=`echo $repo | sed -e 's/.*@//g' -e 's/:.*//g'` &&
   #   repo_port=`echo $repo | grep -o ':[0-9]*' | sed -e 's/://g'` &&
@@ -68,6 +65,13 @@ task :setup => :environment do
   #   ssh-keyscan -p $repo_port -H $repo_host >> ~/.ssh/known_hosts
   # ]
 end
+
+
+task :'setup:db' => :environment do
+  invoke :'setup:db:database_yml'
+  invoke :'create:database'
+end
+
 
 desc "Deploys the current version to the server."
 task :deploy => :environment do
