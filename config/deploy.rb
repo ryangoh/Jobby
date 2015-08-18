@@ -17,7 +17,7 @@ set :branch, 'master'
 set :term_mode, nil
 set :rails_env, 'production'
 set :branch, 'master'
-set :db_name, 'Jobby_production'
+set :db_name, 'Jobby_production2'
 
 # For system-wide RVM install.
 #   set :rvm_path, '/usr/local/rvm/bin/rvm'
