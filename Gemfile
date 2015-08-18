@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'dotenv-rails'
+gem 'mina'
 # Use devise to manage users
 gem 'devise'
 # Use paperclip for uploading photos
