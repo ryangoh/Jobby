@@ -80,7 +80,9 @@ test:
 #
 production:
   <<: *default
-  database: Jobby_production
-  url: <%= ENV['DATABASE_URL'] %>
+  database: Jobby_production2
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASS'] %>
+  #url: <%= ENV['DATABASE_URL'] %>
   # username: Jobby
   # password: <%= ENV['JOBBY_DATABASE_PASSWORD'] %>
