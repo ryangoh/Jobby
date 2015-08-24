@@ -21,3 +21,6 @@
 # Ignore var setting
 .rbenv-vars
 .env
+
+#ignore deploy.rb
+/config/deploy.rb
