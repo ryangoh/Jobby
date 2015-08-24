@@ -17,7 +17,7 @@ set :branch, 'master'
 set :term_mode, nil
 set :rails_env, 'production'
 set :branch, 'mina'
-set :db_name, 'Jobby_production3'
+set :db_name, 'Jobby_production2'
 
 # For system-wide RVM install.
 #   set :rvm_path, '/usr/local/rvm/bin/rvm'
@@ -58,18 +58,14 @@ task :setup => :environment do
   queue! %[touch "#{deploy_to}/#{shared_path}/config/database.yml"]
   queue  %[echo "-----> Be sure to edit '#{deploy_to}/#{shared_path}/config/database.yml'."]
 
+  invoke :'setup:db:database_yml'
+  # invoke :'create:database'
   # queue %[
   #   repo_host=`echo $repo | sed -e 's/.*@//g' -e 's/:.*//g'` &&
   #   repo_port=`echo $repo | grep -o ':[0-9]*' | sed -e 's/://g'` &&
   #   if [ -z "${repo_port}" ]; then repo_port=22; fi &&
   #   ssh-keyscan -p $repo_port -H $repo_host >> ~/.ssh/known_hosts
   # ]
-end
-
-
-task :'setup:db' => :environment do
-  invoke :'setup:db:database_yml'
-  invoke :'create:database'
 end
 
 
@@ -84,6 +80,7 @@ task :deploy => :environment do
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
     invoke :'bundle:install'
+    invoke :'rails:db_create'
     invoke :'rails:db_migrate'
     invoke :'rails:assets_precompile'
     invoke :'deploy:cleanup'
@@ -118,19 +115,21 @@ task :'setup:db:database_yml' => :environment do
   }
 end
 
-desc "Create database"
-task :'create:database' => :environment do
-  deploy do
-    invoke :'git:clone'
-  end
-  queue "cd #{deploy_to}/current"
-  # queue %[echo "-----> Bundle install"]
-  # queue "RAILS_ENV=production bundle install"
-  queue %[echo "-----> Creating Database"]
-  queue "RAILS_ENV=production rake db:create"
-  queue %[echo "-----> DB Created"]
-
-end
+# desc "Create database"
+# task :'create:database' => :environment do
+#   deploy do
+#     invoke :'git:clone'
+#     invoke :'deploy:link_shared_paths'
+#     invoke :'bundle:install'
+#   end
+#   queue "cd #{deploy_to}/current"
+#   # queue %[echo "-----> Bundle install"]
+#   # queue "RAILS_ENV=production bundle install"
+#   queue %[echo "-----> Creating Database"]
+#   queue "RAILS_ENV=production rake db:create"
+#   queue %[echo "-----> DB Created"]
+#
+# end
 
 
 #restart nginx server
