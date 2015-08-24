@@ -56,7 +56,9 @@ task :setup => :environment do
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/#{shared_path}/config"]
 
   queue! %[touch "#{deploy_to}/#{shared_path}/config/database.yml"]
-  queue  %[echo "-----> Be sure to edit '#{deploy_to}/#{shared_path}/config/database.yml'."]
+
+  queue! %[touch "#{deploy_to}/.rbenv-vars"]
+  queue  %[echo "-----> Be sure to add your ENV VAR in '#{deploy_to}/.rbenv-vars'."]
 
   invoke :'setup:db:database_yml'
   # invoke :'create:database'
